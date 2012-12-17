@@ -1,0 +1,1578 @@
+/* <![CDATA[ */
+
+/*begin BROWSER RESET*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: Helvetica, Arial, Verdana, sans-serif;
+	vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+body {
+	line-height: 1;
+	color: black;
+	background: white;
+}
+ol, ul {
+	list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+/*end BROWSER RESET*/
+
+/*begin FORM STYLING*/
+#form_container
+{
+	background:#fff;
+	border:1px solid #ccc;
+	margin:0 auto;
+	text-align:left;
+	width:540px;
+}
+
+
+#form_top
+{
+	display:block;
+	height:10px;
+	margin:10px auto 0;
+	width:550px;
+}
+
+#form_footer
+{
+	width:540px;
+	clear:both;
+	color:#999999;
+	text-align:center;
+	width:540px;
+	padding-bottom: 15px;
+	font-size: 85%;
+}
+
+#form_footer a{
+	color:#999999;
+	text-decoration: none;
+	border-bottom: 1px dotted #999999;
+}
+
+#form_bottom
+{
+	display:block;
+	height:10px;
+	margin:0 auto;
+	width:550px;
+}
+
+fieldset{
+	background-color:#f0f0f0;	
+	border-width:2px;
+	border-style:solid;
+	border-color:#7c879a;	
+	font-family: Helvetica, Arial, Verdana, sans-serif;
+	font-size:12px;		
+	margin:10px 0px 15px 10px;
+	width:550px;
+	position:relative;
+	display:block;
+	padding: 0px 10px 5px 10px;
+}
+
+legend{	
+	background-color:#7c879a;	
+	border-width:1px;
+	border-style:solid;
+	border-color:#7c879a;	
+	color:#fff;
+	font-weight:bold;	
+	font-size:110%;		
+	padding: 2px 5px 1px 5px;
+	margin:0px 0px 10px 0px;
+	position:relative;
+	top: -12px;
+	
+}
+
+
+form.w2f
+{
+	margin:20px 20px 0;
+	padding:0 0 20px;
+}
+
+.w2f
+{
+	font-family: Helvetica, Arial, Verdana, sans-serif;
+	font-size:small;
+}
+
+.w2f li
+{
+	width:61%;
+}
+
+form ul
+{
+	font-size:100%;
+	list-style-type:none;
+	margin:0;
+	padding:1px;
+	width:100%;
+}
+
+form li
+{
+	display:block;
+	margin:0;
+	padding:4px 5px 2px 9px;
+	position:relative;
+}
+
+form li:after
+{
+	clear:both;
+	content:".";
+	display:block;
+	height:0;
+	visibility:hidden;
+}
+
+.buttons:after
+{
+	clear:both;
+	content:".";
+	display:block;
+	height:0;
+	visibility:hidden;
+}
+
+.buttons
+{
+	clear:both;
+	display:block;
+	margin-top:10px;
+}
+
+* html form li
+{
+	height:1%;
+}
+
+* html .buttons
+{
+	height:1%;
+}
+
+* html form li div
+{
+	display:inline-block;
+}
+
+form li div
+{
+	color:#444;
+	margin:0 4px 0 0;
+	padding:0 0 8px 8px;
+}
+
+form li span
+{
+	color:#444;
+	float:left;
+	margin:0 4px 0 0;
+	padding:0 0 8px 8px;
+}
+
+form li div.left
+{
+	display:inline;
+	float:left;
+	width:48%;
+}
+
+form li div.right
+{
+	display:inline;
+	float:right;
+	width:48%;
+}
+
+form li div.left .medium
+{
+	width:100%;
+}
+
+form li div.right .medium
+{
+	width:100%;
+}
+
+.clear
+{
+	clear:both;
+}
+
+form li div label
+{
+	clear:both;
+	color:#444;
+	display:block;
+	font-size:9px;
+	line-height:9px;
+	margin:0;
+	padding-top:3px;
+}
+
+form li span label
+{
+	clear:both;
+	color:#444;
+	display:block;
+	font-size:9px;
+	line-height:9px;
+	margin:0;
+	padding-top:3px;
+}
+
+form li .datepicker
+{
+	cursor:pointer !important;
+	float:left;
+	height:16px;
+	margin:.1em 5px 0 0;
+	padding:0;
+	width:16px;
+}
+
+.form_description
+{
+	border-bottom:1px dotted #ccc;
+	clear:both;
+	display:inline-block;
+	margin:0 0 1em;
+}
+
+.form_description[class]
+{
+	display:block;
+}
+
+.form_description .h2
+{
+	clear:left;
+	font-size:160%;
+	font-weight:400;
+	margin:0 0 3px 3px;
+}
+
+.form_description p
+{
+	font-size:95%;
+	line-height:130%;
+	margin: 0 0 0 12px;
+}
+
+form hr
+{
+	display:none;
+}
+
+form li.section_break
+{
+	border-top:1px dotted #ccc;
+	margin-top:9px;
+	padding-bottom:0;
+	padding-left:9px;
+	padding-top:13px;
+	width:97% !important;
+}
+
+form ul li.first
+{
+	border-top:none !important;
+	margin-top:0 !important;
+	padding-top:0 !important;
+}
+
+form .section_break h3
+{
+	font-size:110%;
+	font-weight:400;
+	line-height:130%;
+	margin:0 0 2px;
+}
+
+form .section_break p
+{
+	font-size:85%;
+
+	margin:0 0 10px;
+}
+
+input{margin-left: 10px;}
+input.button_text
+{
+	overflow:visible;
+	padding:0 7px;
+	width:auto;	
+}
+
+input.submit {
+font-family: Helvetica, Arial, sans-serif;
+font-weight: bold;
+text-transform: uppercase;
+color: #000000;
+background-color: #F0D5B4;
+border-color: #CCCCCC #808080 #808080 #CCCCCC;
+border-style: solid;
+border-top-width: 1px;
+border-right-width: 1px;
+border-bottom-width: 1px;
+border-left-width: 1px;
+margin-bottom: 10px;
+} 
+input.submit:link{background-color: #F0D5B4;}
+input.submit:visited{background-color: #F0D5B4;}
+input.submit:hover{background-color: #e0aa69;}
+
+
+input.submitsmall {
+height: 15px;
+font-family: Helvetica, Arial, sans-serif;
+font-weight: bold;
+font-size: 10px;
+text-transform: uppercase;
+color: #000000;
+background-color: #F0D5B4;
+border-color: #CCCCCC #808080 #808080 #CCCCCC;
+border-style: solid;
+border-top-width: 1px;
+border-right-width: 1px;
+border-bottom-width: 1px;
+border-left-width: 1px;
+
+} 
+input.submitsmall:link{background-color: #F0D5B4;}
+input.submitsmall:visited{background-color: #F0D5B4;}
+input.submitsmall:hover{background-color: #e0aa69;}
+
+
+.buttons input
+{
+	font-size:120%;
+	margin-right:5px;
+}
+
+label.description
+{
+	border:none;
+	color:#222;
+	display:block;
+	font-size:95%;
+	font-weight:700;
+	line-height:150%;
+	padding:0 0 1px;
+}
+
+span.symbol
+{
+	font-size:115%;
+	line-height:130%;
+}
+
+label.choice
+{
+	color:#444;
+	display:block;
+	font-size:100%;
+	line-height:1.4em;
+	margin:-1.55em 0 0 25px;
+	padding:4px 0 5px;
+	width:90%;
+}
+
+select{margin-left: 10px;}
+
+select.select[class]
+{
+	margin:5px 0 0 0;
+	padding:1px 0;
+}
+
+*:first-child+html select.select[class]
+{
+	margin:1px 0;
+}
+
+.safari select.select
+{
+	font-size:120% !important;
+	margin-bottom:1px;
+}
+
+input.small
+{
+	width:25%;
+}
+
+select.small
+{
+	width:25%;
+}
+
+input.medium
+{
+	width:50%;
+}
+
+select.medium
+{
+	width:50%;
+}
+
+input.large
+{
+	width:99%;
+}
+
+select.large
+{
+	width:100%;
+}
+
+textarea.small
+{
+	height:5.5em;
+}
+
+textarea.medium
+{
+	height:10em;
+}
+
+textarea.large
+{
+	height:20em;
+}
+
+
+input.searchsmall
+{
+	font-size: 10px;
+	margin-top: -2px;
+}
+
+input:focus, textarea:focus{
+background-color: WhiteSmoke;
+}
+
+
+/**** Errors ****/
+#error_message
+{
+	background:#fff;
+	border:1px dotted red;
+	margin-bottom:1em;
+	padding-left:0;
+	padding-right:0;
+	padding-top:4px;
+	text-align:center;
+	width:99%;
+}
+
+#error_message_title
+{
+	color:#DF0000;
+	font-size:125%;
+	margin:7px 0 5px;
+	padding:0;
+}
+
+#error_message_desc
+{
+	color:#000;
+	font-size:100%;
+	margin:0 0 .8em;
+}
+
+#error_message_desc strong
+{
+	background-color:#FFDFDF;
+	color:red;
+	padding:2px 3px;
+}
+
+form li.error
+{
+	background-color:#FFDFDF !important;
+	border-bottom:1px solid #EACBCC;
+	border-right:1px solid #EACBCC;
+	margin:3px 0;
+}
+
+form li.error label
+{
+	color:#DF0000 !important;
+}
+
+form p.error
+{
+	clear:both;
+	color:red;
+	font-size:10px;
+	font-weight:700;
+	margin:0 0 5px;
+}
+
+form .required
+{
+	color:red;
+	float:none;
+	font-weight:700;
+}
+
+/**** Guidelines and Error Highlight ****/
+form li.highlighted
+{
+	background-color:#fff7c0;
+}
+
+form .guidelines
+{
+	background:#f5f5f5;
+	border:1px solid #e6e6e6;
+	color:#444;
+	font-size:80%;
+	left:100%;
+	line-height:130%;
+	margin:0 0 0 8px;
+	padding:8px 10px 9px;
+	position:absolute;
+	top:0;
+	visibility:hidden;
+	width:42%;
+	z-index:1000;
+}
+
+form .guidelines small
+{
+	font-size:105%;
+}
+
+form li.highlighted .guidelines
+{
+	visibility:visible;
+}
+
+form li:hover .guidelines
+{
+	visibility:visible;
+}
+
+.no_guidelines .guidelines
+{
+	display:none !important;
+}
+
+.no_guidelines form li
+{
+	width:97%;
+}
+
+.no_guidelines li.section
+{
+	padding-left:9px;
+}
+/*end FORM STYLING*/
+
+/* begin CONTENT STYLING*/  
+
+body
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #326ACD;
+	text-align: center;
+	width: 100%;
+	margin: 0 0 0 0;
+	padding: 0px 0 0px 0;  /* top right bottom left */
+}
+
+ul,ol,li{margin:3px 5px 3px 9px;padding:0 0 0 9px;}
+p	{
+	margin: 10px 0 0px 0;
+	padding: 0 10px 10px 10px;
+	}
+
+img
+{
+	border: 0;
+	margin-left: 0px;
+}
+
+
+a:link, a:visited 
+{
+	color: #316Bc8;
+	font-weight: normal;
+  text-decoration: none;
+}
+ a:hover  
+{
+	text-decoration: underline;
+}
+a:active
+{
+	color: #316Bc8;
+	font-weight: normal;
+  text-decoration: none;
+}
+td  { 	
+  font-family: Helvetica, Arial, Verdana, sans-serif;
+	font-size: 12px;
+ }
+	
+ 
+/* Tabellen mit Linien: */
+table.tablestyle {
+	font: 11px/16px Verdana, Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+	}
+
+th.td-0,th.td-1,th.td-2,th.td-3,th.td-4 {
+	padding: 0 0.5em;
+	text-align: left;
+        border-top: 1px solid #317AFB;
+	border-bottom: 1px solid #317AFB;
+	background: #EEEEFF;
+       vertical-align: top;
+	}
+
+td.td-1,td.td-2,td.td-3,td.td-4 {
+	border-bottom: 1px solid #CCC;
+	padding: 0 0.5em;
+	}
+
+td.td-0 { 
+	border-bottom: 1px solid #CCC;
+	padding: 0 0.5em;
+        font-weight: bold;
+	}
+
+td{vertical-align: top;}
+
+h1 {margin: 10px 10px 10px 10px; padding:3px;}
+h1 {font-family: Helvetica, Arial, Verdana, sans-serif; font-size: 2em; font-weight: bold; line-height: 1em; color:#356bcc; border-bottom: 3px dotted #e38d20;}
+h2 {font-family: Helvetica, Arial, verdana, sans-serif; font-size: 1.3em;  font-weight: bold; color:#356bcc; border-bottom: 2px dotted #e38d20;}
+h2 {margin: 10px 10px 10px 10px; padding:2px;}
+h3 {margin: 5px 10px 5px 10px; padding: 5px 0 0 0;}
+h3 {font-family: Helvetica, Arial, Verdana, sans-serif; font-size: 1em; font-weight: bold; color:#356bcc; border:0;}
+
+dl {margin: 10px 0 0px 0;
+	padding: 0 10px 10px 10px;}
+dd {margin-left: 10px;}
+	
+#container
+	{
+	width: 961px;
+	margin-bottom: 5px;
+	overflow: hidden;
+	}
+
+
+h1 {margin: 10px 10px 10px 10px; padding:3px;}
+h1 {font-family: Helvetica, Arial, Verdana, sans-serif; font-size: 2em; font-weight: bold; color:#356bcc; border-bottom: 3px dotted #e38d20;}
+h2 {font-family: Helvetica, Arial, verdana, sans-serif; font-size: 1.3em;  font-weight: bold; color:#356bcc; border-bottom: 2px dotted #e38d20;}
+h2 {margin: 10px 10px 10px 10px; padding:2px;}
+h3 {margin: 5px 10px 5px 10px; padding: 5px 0 0 0;}
+h3 {font-family: Helvetica, Arial, Verdana, sans-serif; font-size: 1em; font-weight: bold; color:#356bcc; border:0;}
+
+	
+#group_1-6
+	{
+	margin-top: 10px;
+	float: left;
+	width: 951px;
+	margin-bottom:4px;
+	padding-bottom:0px;
+	}
+* html #group_1-6 {margin-left: 0px;}
+
+#group_all
+	{
+	margin-top: 10px;
+	float: left;
+	width: 951px;
+	margin-bottom:10px;
+	padding-bottom:0px;
+	}
+#group_full
+	{
+	margin-top: 10px;
+	float: left;
+	width: 951px;
+	margin-bottom:10px;
+	padding-bottom:0px;
+	}
+#group_1-6 ul {
+	list-style: square;}
+#group_1-6 li {
+	line-height: 110%; padding-bottom: 3px; padding-left: 0px; margin-left: 5px;}
+#group_1-6 ol {
+	list-style: none;}
+#group_all ul {
+	list-style: square;}
+#group_all li {
+	line-height: 110%; padding-bottom: 3px; padding-left: 0px; margin-left: 5px;}
+#group_all ol {
+	list-style: none;}
+#group_full ul {
+	list-style: square;}
+#group_full li {
+	line-height: 110%; padding-bottom: 3px; padding-left: 0px; margin-left: 5px;}
+#group_full ol {
+	list-style: none;}
+
+#group_1-5
+	{
+	float: left;
+	width: 761px;
+	margin-left: 190px;
+	margin-bottom:1px;
+	padding-bottom: 0px;
+	}
+* html #group_1-5
+	{
+	display: inline;
+	}
+
+#group_4-5, #group_3, #group_leader
+	{
+	margin-top: 10px;
+	}
+
+#group_thinmainlong
+	{
+	float: left;
+	width: 761px;
+	margin-left: 10px;
+	margin-bottom:1px;
+	padding-bottom: 0px;
+	}
+
+* html #group_thinmainlong, * html #group_thinmain
+	{
+	display: inline;
+	}
+
+#wallpaper
+{
+  background-color: #326ACD;
+	margin: 0 auto;
+	padding: 0;
+	width: 963px;
+	overflow: visible;
+}
+
+#shell 
+{
+	background-color: #326acd;
+	margin: 0 auto;
+	padding: 0 0 0 0;
+	width: 963px;
+  *z-index: 1;
+}
+
+#langwrapper{
+  position: relative;  
+  width: 961px; 
+  z-index: 3000; 
+  margin-top: 0px; 
+  margin-left: auto; 
+  margin-right: auto; 
+  *margin-top: 0px; 
+  margin-bottom: -33px !important; 
+  margin-bottom: -38px;
+  overflow: hidden;
+}
+
+
+
+
+/* Hides from IE-mac \*/
+* html #langwrapper {height: 1%;}
+#langwrapper { display: block; }
+/* End hide from IE-mac */
+
+#lang
+{ font-size: 10px;
+  font-family:  Helvetica, Arial, Verdana, sans-serif;
+  font-weight: bold;
+  color: #fff;
+  text-align: left;
+  float: right;
+  height: auto;
+  *width: 250px;
+  height: 32px;
+  *height: 40px;
+  margin-right: 15px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1000;
+}
+
+* html #lang {
+  zoom: 1;
+}
+
+#lang { display: inline-table; }
+
+#lang a{
+  font-weight: bold;
+  color: #fff;
+ }
+#lang a:link{
+  font-weight: bold;
+  color: #fff;
+ }
+ #lang a:visited{
+  font-weight: bold;
+  color: #fff;
+ }
+#lang a:hover{
+  font-weight: bold;
+  color: #ddd;
+ }
+#lang a.on{color: #eee; text-decoration: underline;}
+#lang span.orangebullet {font-size: 11px; font-family: sans-serif; color: #E48E25}
+
+.liquidlangtop-left, .liquidlangtop-right, .liquidlangbottom-left, .liquidlangbottom-right { 
+  z-index: 1000;
+  background-image: url('http://cdn.iban-rechner.de/cdn/img/liquidlang3.png') !important;/* CHANGE: path and name of your image1 */
+  background-image: url('http://cdn.iban-rechner.de/cdn/img/liquidlang3.gif');
+	background-repeat: no-repeat;
+	height: 10px;       /* CHANGE: replace by the height of one of your corners (= 1/2 height of the image) */
+	font-size: 2px;    /* DNC: correction IE for height of the <div>'s */
+	}
+.liquidlangtop-left, .liquidlangbottom-left { 
+	margin-right: 10px; /* CHANGE: replace by the width of one of your corners */
+	}
+.liquidlangtop-right, .liquidlangbottom-right { 
+	margin-left: 10px;  /* CHANGE: replace by the width of one of your corners */
+	margin-top: -10px;  /* CHANGE: replace by the height of one of your corners */
+	}
+.liquidlangtop-right {
+	background-position: 100% 0;    /* DNC: position right corner at right side, no vertical changes */
+	}
+.liquidlangbottom-left  { 
+	background-position: 0 -10px;    /* CHANGE: replace second number by negative height of one of your corners */
+	}
+.liquidlangbottom-right { 
+	background-position: 100% -10px; /* CHANGE: replace second number by negative height of one of your corners */
+	}
+
+.liquidlanginside {
+  z-index: 900;
+	margin-left: 10px;               /* CHANGE: replace by the width of one of your corners */
+	margin-right: 10px;              /* CHANGE: replace by the width of one of your corners */
+	background-color: #518bf9;           /* YCC: background-color of the inside */
+	color: #ffffff;                 /* YCC: default text-color of the inside */
+	padding-left: 5px;             /* YCC: all texts at some distance of the left border */
+	padding-right:5px;             /* YCC: all texts at some distance of the right border */
+	text-align: left;  
+	height: 11px;             /* YCC: position of all texts inside */
+	}
+.liquidlangnotopgap    { margin: 0; padding: 0; z-index: 1000;}    /* DNC: to avoid splitting of the box */
+.liquidlangnobottomgap { margin:0; padding: 0; z-index: 1000;} /* DNC: to avoid splitting of the box */
+.liquidlanginsideleft {
+  z-index: 1000;
+	background-image: url('http://cdn.iban-rechner.de/cdn/img/liquidbreadborder.gif'); /* CHANGE: path and name of your image2 */
+	background-repeat: repeat-y;   /* DNC: to pile the image2 as much as needed */
+	}
+.liquidlanginsideright {
+  z-index: 1000;
+  height: 11px;
+	background-image: url('http://cdn.iban-rechner.de/cdn/img/liquidbreadborder.png') !important;
+	background-image: url('http://cdn.iban-rechner.de/cdn/img/liquidbreadborder.gif'); /* CHANGE: path and name of your image2 */
+	background-repeat: repeat-y;   /* DNC: to pile the image2 as much as needed */
+	height: 11px;
+	}
+.liquidlanginsideright { background-position: 100% 0; } /* DNC: position right corner */
+
+#breadsearchwrapper{
+  position: relative;  
+  width: 961px; 
+  z-index: 3000; 
+  margin-top: 0px; 
+  margin-left: auto; 
+  margin-right: auto; 
+  *margin-top: 0px; 
+  margin-bottom: 0px;
+  overflow: hidden;
+}
+
+
+/* Hides from IE-mac \*/
+* html #breadsearchwrapper {height: 1%;}
+#breadsearchwrapper { display: block; }
+/* End hide from IE-mac */}
+
+#breadwrapper{
+  float: left;
+  position: relative;    
+  z-index: 3000; 
+  margin-bottom: 5px;
+  padding-bottom: 0px;
+  margin-top: 0px; 
+  margin-left: 0px; 
+  *margin-top: 0px; 
+  width: auto;
+  *width: 250px
+  overflow: hidden;
+  clear: both;
+}
+/* Hides from IE-mac \*/
+* html #breadwrapper {height: 1%;}
+#breadwrapper { display: inline-block; }
+/* End hide from IE-mac */
+#bread
+{ font-size: 10px;
+  line-height: 13px;
+  font-family:  Helvetica, Arial, Verdana, sans-serif;
+  font-weight: bold;
+  color: #fff;
+  text-align: left;
+  width: auto;
+  *width: 250px;
+  height: 26px;
+  *height: 30px;
+  margin-left: 13px;
+  margin-bottom: 0px;
+  overflow: hidden;
+  position: relative;
+  }
+#bread a{
+  font-weight: bold;
+  color: #fff;
+ }
+#bread a:link{
+  font-weight: bold;
+  color: #fff;
+ }
+#bread a:visited{
+  font-weight: bold;
+  color: #fff;
+ }
+#bread a:hover{
+  font-weight: bold;
+  color: #ddd;
+ }
+#bread a.on{color: #eee; text-decoration: underline;}
+#bread span.orangebullet {font-family: sans-serif; color: #E48E25}
+
+.liquidbreadtop-left, .liquidbreadtop-right { 
+  
+  background-image: url('http://cdn.iban-rechner.de/cdn/img/liquidbread2.png');/* CHANGE: path and name of your image1 */
+	background-repeat: no-repeat;
+	height: 6px;       /* CHANGE: replace by the height of one of your corners (= 1/2 height of the image) */
+	font-size: 2px;    /* DNC: correction IE for height of the <div>'s */
+	}
+.liquidbreadbottom-left, .liquidbreadbottom-right { 
+  
+  background-image: url('http://cdn.iban-rechner.de/cdn/img/liquidbread2.png');/* CHANGE: path and name of your image1 */
+	background-repeat: no-repeat;
+	height: 8px;       /* CHANGE: replace by the height of one of your corners (= 1/2 height of the image) */
+	font-size: 2px;    /* DNC: correction IE for height of the <div>'s */
+	}
+
+.liquidbreadtop-left, .liquidbreadbottom-left { 
+	margin-right: 8px; /* CHANGE: replace by the width of one of your corners */
+	}
+.liquidbreadtop-right, .liquidbreadbottom-right { 
+	margin-left: 8px;  /* CHANGE: replace by the width of one of your corners */
+	margin-top: -8px;  /* CHANGE: replace by the height of one of your corners */
+	}
+.liquidbreadtop-right {
+	background-position: 100% 0;    /* DNC: position right corner at right side, no vertical changes */
+	}
+.liquidbreadbottom-left  { 
+	background-position: 0 -8px;    /* CHANGE: replace second number by negative height of one of your corners */
+	}
+.liquidbreadbottom-right { 
+	background-position: 100% -8px; /* CHANGE: replace second number by negative height of one of your corners */
+	}
+
+.liquidbreadinside {
+  
+	margin-left: 8px;               /* CHANGE: replace by the width of one of your corners */
+	margin-right: 8px;              /* CHANGE: replace by the width of one of your corners */
+	background-color: #518bf9;           /* YCC: background-color of the inside */
+	color: #ffffff;                 /* YCC: default text-color of the inside */
+	padding-left: 3px;             /* YCC: all texts at some distance of the left border */
+	padding-right:5px;             /* YCC: all texts at some distance of the right border */
+	text-align: left;
+	vertical-align: top;  
+	height: 15px;             /* YCC: position of all texts inside */
+	}
+.liquidbreadnotopgap    { margin: 0; padding: 0; z-index: 1000;}    /* DNC: to avoid splitting of the box */
+.liquidbreadnobottomgap { margin:0; padding: 0; z-index: 1000;} /* DNC: to avoid splitting of the box */
+.liquidbreadinsideleft {
+  
+	background-image: url('http://cdn.iban-rechner.de/cdn/img/liquidbreadborder.gif'); /* CHANGE: path and name of your image2 */
+	background-repeat: repeat-y;   /* DNC: to pile the image2 as much as needed */
+	}
+.liquidbreadinsideright {
+  
+  height: 15px;
+	background-image: url('http://cdn.iban-rechner.de/cdn/img/liquidbreadborder2.png'); /* CHANGE: path and name of your image2 */
+	background-repeat: repeat-y;   /* DNC: to pile the image2 as much as needed */
+		}
+.liquidbreadinsideright { background-position: 100% 0; } /* DNC: position right corner */
+
+#liquidsearch
+{ float: right;
+  margin-right: 10px;
+  font-size: 10px;
+  line-height: 13px;
+  font-family:  Helvetica, Arial, Verdana, sans-serif;
+  font-weight: bold;
+  color: #fff;
+  text-align: left;
+  width: auto;
+  *width: 300px;
+  height: 26px;
+  *height: 30px;
+  overflow: hidden;
+  position: relative;  
+  }
+
+
+#contentshell {text-align: left;font-size: 12px; background-color: #afbacd; margin-top: 15px;}
+#contentshell .verticalalign
+{
+	width: 963px;
+	position: absolute;
+	bottom: -13px;
+	margin-left: 0px;
+	height: 20px;	
+  }
+.contentshelltop, .contentshellbottom {display:block; background: #326acd; font-size:1px;}
+.contentshellb1, .contentshellb2, .contentshellb3, .contentshellb4 {display:block; overflow:hidden; }
+.contentshellb1, .contentshellb2, .contentshellb3 {height:1px;}
+.contentshellb2, .contentshellb3, .contentshellb4 {background:#afbacd; border-left:1px solid #9ea9bc; border-right:1px solid #9ea9bc;}
+.contentshellb1 {margin:0 5px; background:#9ea9bc;}
+.contentshellb2 {margin:0 3px; border-width:0 2px;}
+.contentshellb3 {margin:0 2px;}
+.contentshellb4 {height:2px; margin:0 1px;}
+.contentshellboxcontent {display:block; background:#afbacd; border:0 solid #9ea9bc; border-width:0 1px; margin-bottom: -32767px; padding-bottom: 32767px; }
+
+#Navelbar
+{
+width: 961px;
+height: 125px;
+margin-top: 20px;
+margin-left: 0px;
+margin-bottom: 5px;
+position: relative;
+}
+* html #Navelbar
+	{
+	display: inline;
+	}
+
+#logo { 
+ display: inline-block;
+ background: url('http://cdn.iban-rechner.de/cdn/img/rect3849.png') 10px 0 no-repeat;
+ float: left; 
+ margin-top: -2px; 
+ *margin-top: 5px;
+ height: 125px;
+ width: 130px !important;
+ width: 120px;
+ }
+#bevelwrapper{width:820px !important; width: 810px; height: 125px; margin-left: 125px}
+
+.beveltop {background: url('http://cdn.iban-rechner.de/cdn/img/bevel-topbottom.gif') 0 -10px repeat-x; width: 820px; margin: 5px}
+.bevelbottom {background: url('http://cdn.iban-rechner.de/cdn/img/bevel-topbottom.gif') 0 111px repeat-x;
+          *background: url('http://cdn.iban-rechner.de/cdn/img/bevel-topbottom.gif') 0 114px repeat-x;}
+.bevelleft {background: url('http://cdn.iban-rechner.de/cdn/img/bevel-side.gif') -10px 0 repeat-y}
+.bevelright {background: url('http://cdn.iban-rechner.de/cdn/img/bevel-side.gif') 810px 0 repeat-y}
+.bevelBL {background: url('http://cdn.iban-rechner.de/cdn/img/bevel-box-sprite2.gif') -11px 111px no-repeat;
+          *background: url('http://cdn.iban-rechner.de/cdn/img/bevel-box-sprite2.gif') -11px 114px no-repeat;}
+.bevelBR {background: url('http://cdn.iban-rechner.de/cdn/img/bevel-box-sprite2.gif') 810px 111px no-repeat;
+          *background: url('http://cdn.iban-rechner.de/cdn/img/bevel-box-sprite2.gif') 810px 114px no-repeat}
+.bevelTL {background: url('http://cdn.iban-rechner.de/cdn/img/bevel-box-sprite2.gif') -11px -11px no-repeat}
+.bevelTR {background: url('http://cdn.iban-rechner.de/cdn/img/bevel-box-sprite2.gif') 810px -11px no-repeat; padding: 10px}  
+
+#mainNavig
+{
+  width: auto !important;
+	width: 800px;
+	height: 70px;
+	overflow: hidden;
+	position: relative;
+}
+
+#mainNavig ul
+{
+	font-family: Helvetica, Arial, Verdana, sans-serif;
+	list-style-type: none;
+	height: 70px;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+}
+
+#mainNavig  li 
+{
+	float: left;		
+	margin: 0 0 0 0;
+}
+
+#mainNavig li a 
+{
+  display: block;
+  height: 70px;  
+	width: 145px;
+	outline: none;
+	font: bold 1.1em Helvetica, Arial, "Trebuchet MS", Verdana, sans-serif;	
+	line-height: 15px;
+	text-transform: uppercase;
+	text-align: center;
+	background-image: url('http://cdn.iban-rechner.de/cdn/img/navigationsprite.png');
+	background-repeat: no-repeat;	
+}
+#mainNavig li a:link 
+{
+	text-decoration: none;	
+	color: #000;
+}
+#mainNavig li a:visited 
+{
+	text-decoration: none;	
+	color: #000;
+}
+#mainNavig li a:hover
+{
+  text-decoration: underline;
+  color: #575757;
+}
+#mainNavig li a.iban_berechnen_bic {background-position: 0px bottom;}
+#mainNavig li a.iban_berechnen_bic:link, a.iban_berechnen_bic:visited {background-position: 0px bottom;}
+#mainNavig li a.iban_berechnen_bic:hover{background-position: 0px center;}
+#mainNavig li a.iban_berechnen_bicon
+{
+  background-position: 0px top; 
+  text-decoration: underline;
+  color: #000;
+}
+
+#mainNavig li a.faq{background-position: -290px bottom;}
+#mainNavig li a.faq:link, a.faq:visited{background-position: -290px bottom;}
+#mainNavig li a.faq:hover{background-position: -290px center;}
+#mainNavig li a.faqon 
+{
+  background-position: -290px top; 
+  text-decoration: underline;
+  color: #000;
+}
+
+#mainNavig li a.pdf_ueberweisung{background-position: -145px bottom;}
+#mainNavig li a.pdf_ueberweisung:link, a.pdf_ueberweisung:visited{background-position: -145px bottom;}
+#mainNavig li a.pdf_ueberweisung:hover{background-position: -145px center;}
+#mainNavig li a.pdf_ueberweisungon
+{
+  background-position: -145px top; 
+  text-decoration: underline;
+  color: #000;
+}
+
+#mainNavig li a.disclaimer{background-position: -435px bottom;} 
+#mainNavig li a.disclaimer:link, a.disclaimer:visited{background-position: -435px bottom;}
+#mainNavig li a.disclaimer:hover{background-position: -435px center;}
+#mainNavig li a.disclaimeron
+{
+  background-position: -435px top; 
+  text-decoration: underline;
+  color: #000;
+}
+
+#mainNavig li a.privacy{background-position: -580px bottom;}  
+#mainNavig li a.privacy:link, a.privacy:visited{background-position: -580px bottom;}
+#mainNavig li a.privacy:hover{background-position: -580px center;}
+#mainNavig li a.privacyon
+{
+  background-position: -580px top; 
+  text-decoration: underline;
+  color: #000;
+}
+
+/* Sub Navigation */
+#subNav
+{
+  width: 800px; 
+  margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	
+}
+
+.subnavb1, .subnavb2, .subnavb3, .subnavb4, .subnavb5, .subnavb6, .subnavb7 {display:block; overflow:hidden; font-size:0;}
+.subnavb1, .subnavb2, .subnavb3, .subnavb4, .subnavb5, .subnavb6 {height:1px;}
+.subnavb4, .subnavb5, .subnavb6, .subnavb7 {background:#ccc; border-left:1px solid #7c879a; border-right:1px solid #7c879a;}
+
+.subnavb1 {margin: 0 8px; background:#7c879a;}
+.subnavb2 {margin:0 6px; background:#7c879a;}
+.subnavb3 {margin:0 4px; background:#7c879a;}
+.subnavb4 {margin:0 3px; background:#f0f0f0; border-width:0 5px;}
+
+.subnavb5 {margin:0 2px; background:#f0f0f0; border-width:0 4px;}
+.subnavb6 {margin:0 2px; background:#f0f0f0; border-width:0 3px;} 
+.subnavb7 {margin:0 1px; background:#f0f0f0; border-width:0 3px; height:2px;} 
+
+#subNavcontent {display:block; background:#f0f0f0; border:3px solid #7c879a; border-width:0 3px; padding-top: 3px;}
+.subNavLinks
+{
+	font-family: Helvetica, Arial, Verdana, sans-serif;
+  text-transform: uppercase;
+	font-size: 13px;
+	height: 15px;
+	padding: 0 0 0 0;
+	margin: -3px 0 0 0;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.subNavLinks span.orangepipe {font-weight: bold; color: #E48E25}
+
+.subNavLinks a 
+{
+	font-weight: bold;
+	padding:  0 10px 0 10px;
+	margin:  0 0 0 0;
+	color: #575757;
+}
+.subNavLinks a:link 
+{
+	font-weight: bold;
+	color: #575757;
+}
+.subNavLinks a:visited 
+{
+	font-weight: bold;
+	color: #575757;
+}
+.subNavLinks a:hover 
+{
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+
+.subNavLinks a.on 
+{
+	text-decoration: underline;
+}
+
+
+.dottedline
+{
+	height: 1px;
+	border-top: 1px dotted #999;
+	margin-left: 10px;
+	margin-right: 10px;
+	overflow: hidden;
+	width: 142px;
+	clear: both;
+}
+
+
+
+
+
+
+	
+.xb1, .xb2, .xb3, .xb4, .xb5, .xb6, .xb7 {display:block; overflow:hidden; font-size:0;}
+.xb1, .xb2, .xb3, .xb4, .xb5, .xb6 {height:1px;}
+.xb4, .xb5, .xb6, .xb7 {background:#ccc; border-left:1px solid #7c879a; border-right:1px solid #7c879a;}
+
+.xb1 {margin:0 8px; background:#7c879a;}
+.xb2 {margin:0 6px; background:#7c879a;}
+.xb3 {margin:0 4px; background:#7c879a;}
+.xb4 {margin:0 3px; background:#ffffff; border-width:0 5px;}
+
+.xb5 {margin:0 2px; background:#ffffff; border-width:0 4px;}
+.xb6 {margin:0 2px; background:#ffffff; border-width:0 3px;} 
+.xb7 {margin:0 1px; background:#ffffff; border-width:0 3px; height:2px;} 
+
+
+#content_1 {float: left; margin-left: 385px; width: 369px !important; width: 367px;  background:#ffffff; border:3px solid #7c879a; border-width:0 3px;}
+* html #content_1
+	{
+	display: inline;
+	}
+
+#content_2 {float: left; margin-left: -760px !important; margin-left: -758px; width: 369px !important; width: 367px; background:#ffffff; border:3px solid #7c879a; border-width:0 3px;}
+
+#content_3 {float: left; margin-left: 0px; width: 755px !important; width: 753px; background:#ffffff; border:3px solid #7c879a; border-width:0 3px;}
+* html #content_3
+	{
+	display: inline;
+	}	
+
+#content_4 {float: left; margin-left: 385px; width: 369px !important; width: 367px; background:#ffffff; border:3px solid #7c879a; border-width:0 3px;}
+* html #content_4
+	{
+	display: inline;
+	}	
+	
+#content_5 {float: left; margin-left: -760px !important; margin-left: -758px; width: 369px !important; width: 367px; background:#ffffff; border:3px solid #7c879a; border-width:0 3px;}
+
+#content_6 {float: left; margin-left: -940px; width: 164px !important; width: 162px; background:#ffffff; border:3px solid #7c879a; border-width:0 3px;}
+
+#block_main	{float: left; margin-left: 140px; width: 614px !important; width: 613px; background: #ffffff; border:3px solid #7c879a; border-width:0 3px;}
+* html #block_main
+	{
+	display: inline;
+	}
+#thincol {float: left; margin-left: -759px; width: 124px !important; width: 122px; background: #ffffff; border:3px solid #7c879a; border-width:0 3px;}
+.dottedlinetc
+{
+	height: 1px;
+	border-top: 1px dotted #999;
+	margin-left: 10px;
+	margin-right: 10px;
+	overflow: hidden;
+	width: 100px;
+	clear: both;
+}
+
+#widecol {float: left; margin-left: 10px; width: 164px !important; width: 162px; background:#ffffff; border:3px solid #7c879a; border-width:0 3px;}
+
+#leadercol {float: left; margin-left: 0px; width: 755px !important; width: 753px; background:#ffffff; border:3px solid #7c879a; border-width:0 3px;}
+
+#fullblock {float: left; margin-left: 12px !important; margin-left: 7px !important; width: 932px !important; width: 931px; background:#ffffff; border:3px solid #7c879a; border-width:0 3px;}
+
+
+
+#content_1, #content_2, #content_3, #content_4, #content_5, #content_6, #block_main, #thincol, #widecol, #leadercol
+	{
+	padding-bottom: 32767px;
+	margin-bottom: -32767px;
+	}
+.candy 
+{300px; margin: 10px auto 10px auto; overflow: hidden;}
+#content_1 .candy
+{width: 300px; margin: 10px auto 10px auto; overflow: hidden;}
+#block_main .candy
+{width: 300px; margin: 10px auto 10px auto; overflow: hidden;}
+#content_3 .candy
+{width: 728px; margin: 10px auto 10px auto; overflow: hidden;}
+#leadercol .candy
+{width: 728px; margin: 10px auto 10px auto; overflow: hidden;}
+#content_6 .candy
+{width: 160px; margin: 5px auto; overflow: hidden;}
+#thincol .candy
+{width: 119px; margin: 5px auto; overflow: hidden;}
+#widecol .candy
+{width: 160px; margin: 10px auto; overflow: hidden;}
+
+.verticalalign
+	{
+	position: absolute;
+  margin-bottom: 0px;
+  padding-left: 0px;
+	margin-left: -3px !important;
+	margin-left: 0px; 	
+	background:#afbacd;
+	zoom: 1;
+	}
+* html .verticalalign /* Internet Exploder 6 and below*/
+	{
+	display: inline;
+	}	
+
+.roundedtop
+ {
+  position: absolute;
+  background:#afbacd; 
+  margin-left: -3px;
+  
+	}
+*:first-child+html .roundedtop {margin-left: -13px;} /* Internet Exploder 7 only*/
+* html .roundedtop {margin-left: -14px ;} /* Internet Exploder 6 and below*/
+
+
+
+
+
+#content_1 .verticalalign, #content_1 .roundedtop, #content_2 .verticalalign, #content_2 .roundedtop, #content_4 .verticalalign, #content_4 .roundedtop, #content_5 .verticalalign, #content_5 .roundedtop
+{
+	width: 375px;	
+}
+#content_3 .verticalalign, #content_3 .roundedtop, #leadercol .verticalalign, #leadercol .roundedtop
+{
+	width: 761px;
+}
+#content_6 .verticalalign, #content_6 .roundedtop
+{
+	width: 170px;
+}
+#widecol .verticalalign, #widecol .roundedtop
+{
+	width: 170px !important;
+	width: 169px;
+}
+#block_main .verticalalign, #block_main .roundedtop
+{
+  width: 620px;
+}
+#thincol .verticalalign, #thincol .roundedtop
+{
+  width: 130px;
+}
+#fullblock .verticalalign, #fullblock .roundedtop
+{
+  width: 938px;
+}
+
+*:first-child+html #content_6 .verticalalign 
+{margin-bottom: 1px;}
+*:first-child+html #group_4-5 .verticalalign 
+{margin-bottom: 1px;}
+html>/**/body #content_6 .verticalalign 
+{
+padding-bottom: 1px;
+}
+
+/* IE Win shifts these snaps upwards - at some font-sizes (sigh) */
+* html #group_1-2 .verticalalign, * html #group_3 .verticalalign, * html #group_4-5 .verticalalign, * html #widecol .verticalalign  
+	{
+	bottom: -13px;
+	}
+* html #content_2 .verticalalign, * html #content_3 .verticalalign, * html #content_5 .verticalalign, * html #leadercol .verticalalign, *html #thincol .verticalalign
+	{
+	left: -1px;
+	}
+* html #content_1 .verticalalign, * html #content_4 .verticalalign, * html #block_main .verticalalign
+	{
+	right: 1px;
+	}
+* html #content_6 .verticalalign
+  {
+  left: 10px;
+  }
+* html #widecol .roundedtop, * html #widecol .verticalalign
+  {
+  right: 0px;
+  }
+ * html #fullblock .verticalalign
+  {
+  right: -1px;
+  }
+*:first-child+html #widecol .roundedtop {margin-left: -3px;} /* Internet Exploder 7 only*/
+*:first-child+html #widecol .verticalalign {right: 0px;} /* Internet Exploder 7 only*/
+.wrapper_extra
+	{
+	position: relative;
+	}
+/* IE 5.01 doesn't like this */
+* html .wrapper
+	{
+	position/**/: relative;
+	}
+.wrapper
+	{
+	overflow: hidden; /* This hides the excess padding in non-IE browsers */
+	display: inline-block; /* Fixes nasty Opera7 scrolling bug */
+	}
+
+/* easy clearing */
+.wrapper:after
+	{
+	content: '[DO NOT LEAVE IT IS NOT REAL]'; 
+	display: block; 
+	height: 0; 
+	clear: both; 
+	visibility: hidden;
+	}
+.wrapper
+	{
+	display: inline-block;
+	}
+/*\*/
+* html .wrapper
+	{
+/* only IE 5.01 should get this float value - otherwise 5.5 sometimes makes the width of wrapper too small */
+	float: left;
+	float/**/: none;
+	}
+.wrapper
+	{
+	display: block;
+	}
+/* end easy clearing */
+
+.wrapper h5
+	{
+	z-index: 1000;
+	margin: 0;
+	padding: 10px;
+	}
+/* Firefox 1.0 doesn't like the pos:rel - cause text selection problems
+see http://archivist.incutio.com/viewlist/css-discuss/64928 for details */
+* html .wrapper h5
+	{
+	position: relative;
+	}
+
+/* ]]> */
+
+#footer
+{ clear: both;
+margin-top: 15px;
+ font-size: 9px;
+  color: #ffffff;
+ text-align: center;
+/*background-color: #ffaaaa;*/
+}
+
+#footer a:active, #footer a:link, #footer a:visited 
+{
+	color: #ffffff;
+	font-weight: normal;
+  text-decoration: none;
+}
+
+#slider {width:593px; margin-left: 10px; margin-bottom: 10px;}
+#slider .header {width:575px; border:2px solid #326acd; padding:5px; font-weight:bold; margin-top:5px; cursor:pointer; background:url('http://cdn.iban-rechner.de/cdn/img/slheader.gif')}
+#slider .header:hover {background:url('http://cdn.iban-rechner.de/cdn/img/slheader_over.gif')}
+#slider .content {overflow:hidden}
+#slider .text {width:565px; border:2px solid #326acd; border-top:none; padding:10px}
+#slider .text p {margin: 5px 0 0px 0; padding: 0 3px 3px 0px;}
